@@ -1,0 +1,3 @@
+== Welcome Carrierwave with jQuery File Upload
+
+Demo aplication integrating Carrierwave with jQuery File Upload to create Galleries with multiple Images.

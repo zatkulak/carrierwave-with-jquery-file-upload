@@ -1,0 +1,22 @@
+- if galleries.any?
+  %div.row-fluid#galleries
+    %table.table.table-striped.table-hover
+      %thead
+        %tr
+          %th.span4 Title
+          %th.span7 Description
+          %th.span1 Actions
+      %tbody
+        - galleries.each do |gallery|
+          %tr
+            %td
+              = gallery.title
+            %td
+              = gallery.description
+            %td
+              = link_to raw('<i class="icon-pencil"></i>'), edit_gallery_path(gallery), :title => "Edit", :remote => :true, :data => {:action => 'modal'}
+              = link_to raw('<i class="icon-picture"></i>'), manage_gallery_path(gallery), :title => "Manage gallery", :target => '_blank'
+              = link_to raw('<i class="icon-remove"></i>'), gallery_path(gallery), :title => "Delete", :data => {:confirm => 'Are you sure?'}, :method => :delete
+- else
+  .alert.alert-info#galleries
+    No records yet.

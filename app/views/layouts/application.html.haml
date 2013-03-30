@@ -1,0 +1,24 @@
+!!!
+%html
+	%head
+		%title Carrierwave with jQuery File Upload
+		= javascript_include_tag "/backend/jquery-1.7.2.min.js"
+		= javascript_include_tag "/backend/rails.js"
+		= javascript_include_tag "/bootstrap/js/bootstrap.min.js"
+		= stylesheet_link_tag "/bootstrap/css/bootstrap.min.css"
+		= stylesheet_link_tag "/bootstrap/css/custom_bootstrap.css"
+		= javascript_include_tag "modals"
+		= javascript_include_tag "/backend/jquery.livequery.js"
+		/
+			[if lt IE 9]>
+			= javascript_include_tag "/multiupload/js/html5.js"
+		= csrf_meta_tag
+	%body{:style => "padding: 60px 0 40px 0;"}
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container-fluid
+					= link_to "Carrierwave with jQuery File Upload", root_path, :class => "brand"
+					%ul.nav
+						= active_link_to "Galleries", root_path, :wrap_tag => :li
+		.container-fluid
+			= yield

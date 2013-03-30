@@ -1,0 +1,9 @@
+h1{font-size:23px;margin-top:0;margin-bottom:20px;}
+.head_controls {margin-top:5px;}
+
+.modal-large {top:39%;width:780px;margin:-250px 0 0 -390px;}
+.modal-large .modal-body{max-height:500px;}
+.modal-large.fade.in {top:39% !important;}
+
+.modal form{margin:0 0 0}
+.modal h3{font-size:23px;}

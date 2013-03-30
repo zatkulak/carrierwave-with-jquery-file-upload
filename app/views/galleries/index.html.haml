@@ -1,0 +1,8 @@
+%div.row-fluid
+  %h1.span8
+    Galleries management
+
+  %div.pull-right.head_controls
+    = link_to raw('<i class="icon-plus icon-white"></i>') + " Create gallery", new_gallery_path, :class => "btn btn-success", :remote => :true, :data => {:action => 'modal'}
+
+= render :partial => 'list', :locals => {:galleries => @galleries}

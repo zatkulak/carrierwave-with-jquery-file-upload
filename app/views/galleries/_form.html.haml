@@ -1,0 +1,15 @@
+= twitter_bootstrap_form_for gallery, :remote => :true, :html => {:class => 'form-horizontal', :data => { :form => 'modal', :replace_id => 'galleries' } } do |t|
+
+  %div.modal-header
+    %a.close{"data-dismiss" => "modal"} ×
+    %h3
+      = form_title(gallery, "Gallery")
+
+  %div.modal-body
+    %fieldset
+      = error_messages_for(gallery)
+      = t.text_field :title, "Title", :placeholder => "Title", :class => "span7"
+      = t.text_area :description, "Description", :placeholder => "Description", :rows => 3, :class => "span7"
+  %div.modal-footer
+    %a.btn{"data-dismiss" => "modal", :href => "#"} Close
+    = t.submit form_button_text(gallery), :class => 'btn btn-inverse'

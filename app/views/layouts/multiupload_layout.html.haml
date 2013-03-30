@@ -1,0 +1,36 @@
+!!!
+%html
+	%head
+		%title Carrierwave with jQuery File Upload
+		= stylesheet_link_tag "/bootstrap/css/bootstrap.min.css", :media => "all"
+		= stylesheet_link_tag "/multiupload/css/style.css", :media => "all"
+		= stylesheet_link_tag "/bootstrap/css/bootstrap-responsive.min.css", :media => "all"
+		= stylesheet_link_tag "/bootstrap/css/custom_bootstrap.css", :media => "all"
+		/
+			[if lt IE 7]>
+			= stylesheet_link_tag "/multiupload/css/bootstrap-ie6.min.css", :media => "all"
+		= stylesheet_link_tag "/multiupload/css/bootstrap-image-gallery.min.css", :media => "all"
+		= stylesheet_link_tag "/multiupload/css/jquery.fileupload-ui.css", :media => "all"
+		/
+			[if lt IE 9]>
+			= javascript_include_tag "/multiupload/js/html5.js"
+		= csrf_meta_tag
+	%body
+		#content
+			= yield
+		= javascript_include_tag "/multiupload/js/jquery.min.js"
+		= javascript_include_tag "/multiupload/js/vendor/jquery.ui.widget.js"
+		= javascript_include_tag "/multiupload/js/tmpl.min.js"
+		= javascript_include_tag "/multiupload/js/load-image.min.js"
+		= javascript_include_tag "/multiupload/js/canvas-to-blob.min.js"
+		= javascript_include_tag "/bootstrap/js/bootstrap.min.js"
+		= javascript_include_tag "/multiupload/js/bootstrap-image-gallery.min.js"
+		= javascript_include_tag "/multiupload/js/jquery.iframe-transport.js"
+		= javascript_include_tag "/multiupload/js/jquery.fileupload.js"
+		= javascript_include_tag "/multiupload/js/jquery.fileupload-fp.js"
+		= javascript_include_tag "/multiupload/js/jquery.fileupload-ui.js"
+		= javascript_include_tag "/multiupload/js/locale.js"
+		= javascript_include_tag "/multiupload/js/main.js"
+		/
+			[if gte IE 8]>
+			= javascript_include_tag "/multiupload/js/cors/jquery.xdr-transport.js"
